@@ -54,7 +54,7 @@ public class Ball : MonoBehaviour
     }
     public void DesactiveRb()
     {
-        rb.velocity = Vector3.zero;
+        rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = 0f;
         rb.isKinematic = true;
     }
@@ -69,9 +69,9 @@ public class Ball : MonoBehaviour
             if (PlayerPrefs.GetInt("Restart", 0) >= 3 && PlayerPrefs.GetInt("LastLevel", 1) < SceneManager.GetActiveScene().buildIndex+1 && PlayerPrefs.GetInt("Ads",0) == 0)
             {
                 DesactiveRb();
-                GameObject.Find("GameManager").GetComponent<GM>().AdCanvas.SetActive(true);
+              //  GameObject.Find("GameManager").GetComponent<GM>().AdCanvas.SetActive(true);
                 Debug.Log(restartcount);
-                PlayerPrefs.SetInt("Ads", 1);
+               // PlayerPrefs.SetInt("Ads", 1);
             }
             else
             {
@@ -93,7 +93,7 @@ public class Ball : MonoBehaviour
                 PlayerPrefs.SetInt("LastLevel", SceneManager.GetActiveScene().buildIndex + 1);
             }
             NextlvlPanel.SetActive(true);
-            PlayerPrefs.SetInt("Ads", 0);
+           // PlayerPrefs.SetInt("Ads", 0);
             PlayerPrefs.SetInt("Restart", 0);
             PlayerPrefs.DeleteKey("Restart");
             DesactiveRb();
@@ -107,7 +107,7 @@ public class Ball : MonoBehaviour
             if (PlayerPrefs.GetInt("Restart",0) >= 3 && PlayerPrefs.GetInt("LastLevel",1) < SceneManager.GetActiveScene().buildIndex + 1 && PlayerPrefs.GetInt("Ads", 0) == 0)
             {
                 DesactiveRb();
-                GameObject.Find("GameManager").GetComponent<GM>().AdCanvas.SetActive(true);
+               // GameObject.Find("GameManager").GetComponent<GM>().AdCanvas.SetActive(true);
                 Debug.Log(restartcount);
                 PlayerPrefs.SetInt("Ads", 1);
 
