@@ -18,7 +18,7 @@ PlayerSettings:
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_ShowUnitySplashScreen: 1
-  m_ShowUnitySplashLogo: 1
+  m_ShowUnitySplashLogo: 0
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 1
@@ -814,10 +814,7 @@ PlayerSettings:
   webGLShowDiagnostics: 0
   webGLDataCaching: 0
   webGLDebugSymbols: 0
-  webGLEmscriptenArgs: -Oz -s "EXPORTED_FUNCTIONS=['_gpxLoadTextureAsync','_gpxGetFreeSoundChannel','_gpxSetSoundVolume','_gpxPlaySound','_gpxStopSound','_gpxResumeSounds','_gpxGetSoundDuration']"
-    --profiling-funcs -s GL_PREINITIALIZED_CONTEXT=1 -s USE_WEBGL2=1 -s MIN_WEBGL_VERSION=1
-    -s MAX_WEBGL_VERSION=2 -s PRECISE_F32=0 -s ALLOW_MEMORY_GROWTH=1 -s TOTAL_MEMORY=134217728
-    -s FORCE_FILESYSTEM=1 -s "EXPORTED_RUNTIME_METHODS=['getMemory','stackTrace','addRunDependency','removeRunDependency','FS_createPath','FS_createDataFile','FS_createPreloadedFile','ccall','cwrap','callMain','dynCall','lengthBytesUTF8','stringToUTF8','UTF8ToString','UTF16ToString','Pointer_stringify']"
+  webGLEmscriptenArgs: 
   webGLModulesDirectory: 
   webGLTemplate: APPLICATION:PWA
   webGLAnalyzeBuildSize: 0
@@ -826,7 +823,7 @@ PlayerSettings:
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
-  webGLDecompressionFallback: 0
+  webGLDecompressionFallback: 1
   webGLInitialMemorySize: 32
   webGLMaximumMemorySize: 2048
   webGLMemoryGrowthMode: 2
@@ -840,7 +837,7 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    WebGL: LETAI_TRUESHADOW
+    WebGL: 
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

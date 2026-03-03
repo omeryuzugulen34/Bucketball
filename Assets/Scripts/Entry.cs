@@ -1,13 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEditor;
+
 public class Entry : MonoBehaviour
 {
     public GameObject SettingsCanvas;
     public GameObject canvas;
     public GameObject RotateCanvas;
+
+    private void Start()
+    {
+    }
 
     private void Update()
     {
